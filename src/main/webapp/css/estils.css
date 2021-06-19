@@ -1,0 +1,146 @@
+@media (min-width: 55em) {
+	main,header{
+		max-width: 800px;
+		margin: 0 auto;
+	}
+}
+	body{
+		background-color: #1f1c22;
+		margin-bottom: 750px;
+	}
+	.espai{
+		margin: 2.6875em;
+	}
+	img{
+		display: block;
+  		margin: 0 auto;
+	}
+	header{
+		text-align: center;
+	}
+	input{
+		color: #664100;
+	}
+	div.container{
+		display: block;
+		background-color: inherit;
+		border-top: 10px solid #D38600;
+		border-bottom: 10px solid #D38600;
+		border-radius: 8px;
+		max-width: auto;
+		text-align: center;
+		padding: 10px;
+	}
+	div.border-auxiliar{
+		border-right: 10px dashed #D38600;
+		border-left: 10px dashed #D38600;
+		width: 92%;
+		margin: 0 auto;
+	}
+	div.container a{
+		display: block;
+		padding: 10px;
+		border-radius: 7px;
+		text-decoration: none;
+		color: #664100;
+		width: 210px;
+		margin: 8px auto;
+		font-size: 30px;
+	}
+	div.container input{
+		display: block;
+		padding: 10px;
+		text-decoration: none;
+		border-radius: 6px;
+		background-color: inherit;
+		width:fit-content;
+		margin: 20px auto;
+		font-size: 30px;
+		border: none;
+	}
+	div.container input:focus{
+		outline: none;
+		box-shadow: 0 0 0 2pt #D38600;
+	}
+	div.container input::placeholder{
+		color: #664100;
+	}
+	#enviar{
+		margin-top: 30px;
+		background-color: #D38600;
+	}
+	.inline{
+		display: inline-block;
+	}
+	div.container a:hover{
+		background-color: #fea200;
+	}
+	div.container a:visited{
+		color: #664100;
+	}
+	
+	.div1 *{
+		display: inline-block;
+	}
+	
+	main table{
+		margin: 0 auto;
+		font-size: 30px;
+		color: #fea200;
+		border-collapse:collapse;
+	}
+	main table td, main table th{
+		padding: 0px;
+		padding:15px;
+		border:5px solid #664100;
+	}
+	main table th{
+		background-color: #664100;
+	}
+
+	.grid-container {
+		display: block;
+		position: relative;
+		height: 200px;
+	}
+	
+	.grid-container div {
+		position: absolute;
+		display: inline-block;
+	}
+	
+	.imgJugSol{
+		top: 10%;
+		left: 10%;
+	}
+	
+	.regJug{
+		top: 45%;
+		left: 30%;
+	}
+	
+	.veuJug{
+		top: 45%;
+		right: 5%;
+	}
+	
+	.imgJugTeam{
+		bottom: 5%;
+		left: 6%;
+	}
+	
+	.imgJugTeam2{
+		bottom: 5%;
+		left: 14%;
+	}
+	
+	.regEq{
+		bottom: 33%;
+		left: 30%;
+	}
+	
+	.veuEq{
+		bottom: 33%;
+		right: 5%;
+	}
+	
