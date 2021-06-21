@@ -13,6 +13,7 @@ public class RegistrarEquips implements Action {
 	}
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		request.setAttribute("codiSortida", 100);
 		return "registrarEquips.jsp";
 	}
 }

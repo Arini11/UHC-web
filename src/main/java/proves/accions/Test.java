@@ -21,6 +21,8 @@ public class Test implements Action {
 		LogicaFacade dades = new LogicaFacade();
 		dades.insertPlayer(nom, nickname);
 		
+		request.removeAttribute("codiSortida");
+		request.setAttribute("codiSortida", 100);
 		// retornar a l'índex
 		return "index2.jsp";
 	}

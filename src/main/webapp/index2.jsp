@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="css/estils.css">
 <title>UHC</title>
 </head>
-<body onload="notificarEstatQuery()">
+<body>
 <header>
 	<img src="img/UHC_logo.png" alt="logo" width="250" height="250">
 </header>
@@ -16,45 +16,17 @@
 	<div class="container">
 	<div class="border-auxiliar">
 		<div class="grid-container">
-			<div class="imgJugSol">
-				<img width="75%" height="75%" alt="jugador sol" src="img/player.png"/>
-			</div>
-			<div class="regJug">
-				<a href="/proves/add?action=registrarJugadors">Registrar jugador</a>
-			</div>
-			<div class="veuJug">
-				<a href="/proves/add?action=veureJugadors">Ver jugadores</a>
-			</div>
-		</div>
-		<div class="grid-container">
-			<div class="imgJugTeam">
-				<img width="75%" height="75%" alt="jugador sol" src="img/player.png"/>
-			</div>
-			<div class="imgJugTeam2">
-				<img width="75%" height="75%" alt="jugador sol" src="img/player.png"/>
-			</div>
-			<div class="regEq">
-				<a href="/proves/add?action=registrarEquips">Registrar equipo</a>
-			</div>
-			<div class="veuEq">
-				<a href="/proves/add?action=veureEquips">Ver equipos</a>
-			</div>
-		</div>
-	</div>
-	</div>
-	
-	<script type="text/javascript">
-		function notificarEstatQuery() {
 			<% if(codiSortida == 200) {%>
-	    		alert("Equipo añadido correctamente!");
+	    		<p>Equipo añadido correctamente!</p>
 	    	<% } else if(codiSortida == 400){%>
-	    		alert("El equipo ya existe!");
+	    		<p>El equipo ya existe!</p>
 	    	<% } %>
-		}
-			
-	</script>
+		</div>
+		<form action="<%= response.encodeURL("/UHC/add?action=Redirect") %>" method="post" id="redirect">
+		 <a href="#" onclick="document.getElementById('redirect').submit();"> Menú </a>
+		</form>
+	</div>
+	</div>
 </main>
-
-
 </body>
 </html>

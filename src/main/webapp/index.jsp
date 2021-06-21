@@ -16,27 +16,27 @@
 	<div class="border-auxiliar">
 		<div class="grid-container">
 			<div class="imgJugSol">
-				<img width="75%" height="75%" alt="jugador sol" src="img/player.png"/>
+				<img width="65px" height="175px" alt="jugador sol" src="img/player.png"/>
 			</div>
 			<div class="regJug">
-				<a href="/proves/add?action=registrarJugadors">Registrar jugador</a>
+				<a href="/UHC/add?action=registrarJugadors">Registrar jugador</a>
 			</div>
 			<div class="veuJug">
-				<a href="/proves/add?action=veureJugadors">Ver jugadores</a>
+				<a href="/UHC/add?action=veureJugadors">Ver jugadores</a>
 			</div>
 		</div>
 		<div class="grid-container">
 			<div class="imgJugTeam">
-				<img width="75%" height="75%" alt="jugador sol" src="img/player.png"/>
+				<img width="65px" height="175px" alt="jugador sol" src="img/player.png"/>
 			</div>
 			<div class="imgJugTeam2">
-				<img width="75%" height="75%" alt="jugador sol" src="img/player.png"/>
+				<img width="65px" height="175px" alt="jugador sol" src="img/player.png"/>
 			</div>
 			<div class="regEq">
-				<a href="/proves/add?action=registrarEquips">Registrar equipo</a>
+				<a href="/UHC/add?action=registrarEquips">Registrar equipo</a>
 			</div>
 			<div class="veuEq">
-				<a href="/proves/add?action=veureEquips">Ver equipos</a>
+				<a href="/UHC/add?action=veureEquips">Ver equipos</a>
 			</div>
 		</div>
 	</div>

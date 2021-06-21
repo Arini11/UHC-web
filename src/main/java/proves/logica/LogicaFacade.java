@@ -15,14 +15,17 @@ public class LogicaFacade {
 		List<String> players = new ArrayList<String>();
 		
 		Connection connection = new Connexio().connecta();
-		String sql = "select nom,nickname from player";
+		String sql = "select nom,nickname,equip from player";
 		Statement ordre = connection.createStatement();
 		ResultSet rs = ordre.executeQuery(sql);
 		
 		while(rs.next()) {
-			players.add(rs.getString(1)+";"+rs.getString(2));
+			players.add(rs.getString(1)+";"+rs.getString(2)
+			+";"+rs.getString(3));
 		}
-		
+		rs.close();
+		ordre.close();
+		connection.close();
 		return players;
 
 	}
@@ -39,8 +42,30 @@ public class LogicaFacade {
 		while(rs.next()) {
 			teams.add(rs.getString(1));
 		}
-		
+		rs.close();
+		ordre.close();
+		connection.close();
 		return teams;
+
+	}
+	
+public String getTeamFromPlayer(String nickname) throws SQLException {
+		
+		String team = "";
+		
+		Connection connection = new Connexio().connecta();
+		String sql = "select equip from player where nickname='"+nickname+"'";
+		Statement ordre = connection.createStatement();
+		ResultSet rs = ordre.executeQuery(sql);
+		
+		while(rs.next()) {
+			team = rs.getString(1);
+		}
+		rs.close();
+		ordre.close();
+		connection.close();
+		
+		return team;
 
 	}
 	
@@ -72,12 +97,28 @@ public class LogicaFacade {
 	            ordre.close();
 	            
 	        } catch (SQLException throwables) {
-	            throwables.printStackTrace();
+	            //throwables.printStackTrace();
 	            codiSortida = 400;
 	        }
 	     	
 	     connection.close();
 	     return codiSortida;	
+	}
+
+	public void actualitzarEquipJugador(String equip, String jugador) throws SQLException {
+		String sql = "update player set equip=? where nickname=?"; 
+	     Connection connection = new Connexio().connecta();
+	     	try {
+	            PreparedStatement ordre = connection.prepareStatement(sql);
+	            ordre.setString(1, equip);
+	            ordre.setString(2, jugador);
+
+	            ordre.executeUpdate();
+	            ordre.close();
+	        } catch (SQLException throwables) {
+	            throwables.printStackTrace();
+	        }
+	     	connection.close();
 	}
 	
 }

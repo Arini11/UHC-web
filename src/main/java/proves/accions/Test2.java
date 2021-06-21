@@ -21,11 +21,14 @@ public class Test2 implements Action {
 		
 		// codis sortida
 		/*
+		 *  100 -> Null, encara no s'ha enviat res al servidor, per tant,
+		 *  no hi pot haver codi de sortida
 		 *  200 -> Correcte
 		 *  400 -> Algun error
 		 */
+		request.removeAttribute("codiSortida");
 		request.setAttribute("codiSortida", dades.insertTeam(nom));
 		// retornar a l'índex
-		return "index2.jsp";
+		return "registrarEquips.jsp";
 	}
 }

@@ -143,4 +143,21 @@
 		bottom: 33%;
 		right: 5%;
 	}
-	
+	.codiSortida{
+		font-weight: 800;
+		font-size: 40px;
+	}
+	.correcte{
+		color: green;
+	}
+	.incorrecte{
+		color: red;
+	}
+	.llista{
+		font-size: 25px;
+		background-color: #1f1c22;
+		color: #fea200;
+		border:5px solid #664100;
+		border-radius: 7px;
+		padding: 5px;
+	}
