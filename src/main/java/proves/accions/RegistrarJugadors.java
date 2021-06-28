@@ -13,6 +13,6 @@ public class RegistrarJugadors implements Action {
 	}
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		return "registrarJugadors.jsp";
+		return "jsp/registrarJugadors.jsp";
 	}
 }

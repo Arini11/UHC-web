@@ -161,3 +161,17 @@
 		border-radius: 7px;
 		padding: 5px;
 	}
+	.centrat{
+		text-align: center;
+	}
+	.botoEliminar{
+		background: #1f1c22 url('../img/red_cross.png') center no-repeat;
+		background-size: 30px;
+		size: 100px;
+		width: 45px;
+		height: 50px;
+		border: none;
+	}
+	.sensePadding{
+		padding: 0px;
+	}

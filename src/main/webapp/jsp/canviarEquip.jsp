@@ -1,7 +1,4 @@
 <%@ page import = "java.util.*, proves.logica.*, proves.connexio.*" %>
-<%
-
-%>
 <html>
 </head>
 <body>

@@ -22,7 +22,7 @@
 	    		<p>El equipo ya existe!</p>
 	    	<% } %>
 		</div>
-		<form action="<%= response.encodeURL("/UHC/add?action=Redirect") %>" method="post" id="redirect">
+		<form action="<%= response.encodeURL("/UHC/servletController?action=Redirect") %>" method="post" id="redirect">
 		 <a href="#" onclick="document.getElementById('redirect').submit();"> Menú </a>
 		</form>
 	</div>

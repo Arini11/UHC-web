@@ -4,10 +4,37 @@ import java.sql.*;
 import java.util.*;
 
 import proves.connexio.Connexio;
+import proves.objectes.Usuari;
 
 public class LogicaFacade {
 	
 	public LogicaFacade() {
+	}
+
+	public String valida(String user, String pwd, Usuari usr) {
+		Connection conn = null;
+		String error = "";
+		try {
+			conn = new Connexio().connecta();
+			String sql = "select rol from usuari where nomUsuari=? and contrasenya=?";
+			PreparedStatement ordre = conn.prepareStatement(sql);
+            ordre.setString(1, user);
+            ordre.setString(2, pwd);
+			ResultSet rs = ordre.executeQuery();
+			if(rs.next()) {
+				usr.setRol(rs.getString("rol"));
+			}else {error="Credencials no vàlides";}
+			rs.close();
+			ordre.close();
+			conn.close();
+		} catch(Exception e) {e.printStackTrace();}
+		// Seguro per tancar la connexió
+		if (conn!=null){
+			try {
+				conn.close();
+			} catch (Exception e){}
+		}
+		return error;
 	}
 
 	public List<String> getPlayers() throws SQLException {
@@ -49,7 +76,7 @@ public class LogicaFacade {
 
 	}
 	
-public String getTeamFromPlayer(String nickname) throws SQLException {
+	public String getTeamFromPlayer(String nickname) throws SQLException {
 		
 		String team = "";
 		
@@ -120,5 +147,15 @@ public String getTeamFromPlayer(String nickname) throws SQLException {
 	        }
 	     	connection.close();
 	}
+
+	public void eliminarEquip(String equip) throws SQLException {
+		Connection connection = new Connexio().connecta();
+		String sql = "delete from team where nom='"+equip+"'";
+		Statement ordre = connection.createStatement();
+		ordre.executeUpdate(sql);
+		ordre.close();
+		connection.close();
+	}
+
 	
 }

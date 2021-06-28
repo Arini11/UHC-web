@@ -24,6 +24,6 @@ public class Test implements Action {
 		request.removeAttribute("codiSortida");
 		request.setAttribute("codiSortida", 100);
 		// retornar a l'índex
-		return "index2.jsp";
+		return "jsp/index2.jsp";
 	}
 }

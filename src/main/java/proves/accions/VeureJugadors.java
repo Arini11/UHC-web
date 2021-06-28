@@ -13,6 +13,6 @@ public class VeureJugadors implements Action {
 	}
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		return "veureJugadors.jsp";
+		return "jsp/veureJugadors.jsp";
 	}
 }

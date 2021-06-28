@@ -40,7 +40,7 @@
 			}
 		}
 		
-		ajaxRequest.open("GET", "/UHC/add?action=CanviarEquip&equip="+equip+"&jugador="+jugador, true);
+		ajaxRequest.open("GET", "/UHC/servletController?action=CanviarEquip&equip="+equip+"&jugador="+jugador, true);
 		ajaxRequest.send(null);
 	}
 	function submitForm(element)

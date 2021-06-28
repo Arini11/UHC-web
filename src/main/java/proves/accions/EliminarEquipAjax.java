@@ -7,13 +7,16 @@ import proves.Action;
 import proves.logica.LogicaFacade;
 
 
-public class RegistrarEquips implements Action {
+public class EliminarEquipAjax implements Action {
 	
-	public RegistrarEquips() {
+	public EliminarEquipAjax() {
 	}
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		request.setAttribute("codiSortida", 100);
-		return "jsp/registrarEquips.jsp";
+		
+		String equip = request.getParameter("equip");
+		LogicaFacade dades = new LogicaFacade();
+		dades.eliminarEquip(equip);
+		return "jsp/actualitzarEquipsAjax.jsp";
 	}
 }

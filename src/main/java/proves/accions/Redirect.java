@@ -13,6 +13,6 @@ public class Redirect implements Action {
 	}
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		return "index.jsp";
+		return "jsp/index.jsp";
 	}
 }

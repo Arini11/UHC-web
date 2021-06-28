@@ -19,7 +19,7 @@
 
 <main>
 	<div class="container">
-		<form action="<%= response.encodeURL("/UHC/add?action=Test2") %>" method="post">
+		<form action="<%= response.encodeURL("/UHC/servletController?action=Test2") %>" method="post">
 			<input type="text" name="nom" placeholder="Nombre equipo" autocomplete="off" required>
 			<input type="submit" value="Registrar" id="enviar">
 		</form>

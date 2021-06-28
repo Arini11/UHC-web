@@ -29,6 +29,6 @@ public class Test2 implements Action {
 		request.removeAttribute("codiSortida");
 		request.setAttribute("codiSortida", dades.insertTeam(nom));
 		// retornar a l'índex
-		return "registrarEquips.jsp";
+		return "jsp/registrarEquips.jsp";
 	}
 }

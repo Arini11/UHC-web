@@ -13,6 +13,6 @@ public class VeureEquips implements Action {
 	}
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		return "veureEquips.jsp";
+		return "jsp/veureEquips.jsp";
 	}
 }
