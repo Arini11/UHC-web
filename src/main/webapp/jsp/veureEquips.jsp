@@ -66,6 +66,10 @@
 		<%} %>
 	</tbody>
 	</table>
+	<form action="<%=response.encodeURL("/UHC/servletController?action=GenerarInforme")%>"
+			style="text-align: center;margin-top: 20px;" method="post" id="generarInforme" target="_blank">
+		<input type="button" value="Generar Informe" name="generarInforme" onclick="document.getElementById('generarInforme').submit()" >
+	</form>
 	<h3 class="codiSortida incorrecte centrat"><%=error %></h3>
 	</main>
 </body>

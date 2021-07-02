@@ -4,7 +4,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import proves.Action;
-import proves.logica.LogicaFacade;
 
 
 public class VeureJugadors implements Action {

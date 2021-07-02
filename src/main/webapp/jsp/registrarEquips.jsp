@@ -20,7 +20,7 @@
 <main>
 	<div class="container">
 		<form action="<%= response.encodeURL("/UHC/servletController?action=Test2") %>" method="post">
-			<input type="text" name="nom" placeholder="Nombre equipo" autocomplete="off" required>
+			<input type="text" name="nom" placeholder="Nombre equipo" autocomplete="off" autofocus required>
 			<input type="submit" value="Registrar" id="enviar">
 		</form>
 		<%if(codiSortida == 200){ %>

@@ -23,6 +23,8 @@ public class Valida implements Action {
 		Usuari usr = new Usuari(user, pwd); 
 		LogicaFacade dades = new LogicaFacade();
 		error = dades.valida(user, pwd, usr);
+		// Si hi ha algun error, recarrega la pàgina ensenyant l'error,
+		// si no n'hi ha cap, avança cap al menú.
 		if (error.equalsIgnoreCase("")){
 			HttpSession ses = request.getSession();
 			ses.removeAttribute("usuari");
